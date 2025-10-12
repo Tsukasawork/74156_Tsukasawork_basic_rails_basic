@@ -10,7 +10,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+   <body>
     <% if logged_in? %>
       <%= render 'shared/header' %>
     <% else %>
@@ -19,4 +19,3 @@
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>
-</html>
