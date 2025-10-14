@@ -12,4 +12,3 @@
     user = User.find(user_ids.sample)
     user.boards.create!(title: "タイトル#{index}", body: "本文#{index}")
   end
-  
