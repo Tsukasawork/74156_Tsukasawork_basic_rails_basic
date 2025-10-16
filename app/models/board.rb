@@ -4,4 +4,5 @@ class Board < ApplicationRecord
 
   belongs_to :user
   mount_uploader :board_image, BoardImageUploader
+  has_many :comments, dependent: :destroy
 end

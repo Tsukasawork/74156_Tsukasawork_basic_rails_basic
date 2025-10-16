@@ -7,6 +7,12 @@ class BoardsController < ApplicationController
     @board = Board.new
   end
 
+  def show
+    @board = Board.find(params[:id])
+    @comment = Comment.new
+    @comments = @board.comments.includes(:user).order(created_at: :desc)
+  end
+
   def create
     @board = current_user.boards.build(board_params)
     if @board.save
