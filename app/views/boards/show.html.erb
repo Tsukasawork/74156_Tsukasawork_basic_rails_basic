@@ -22,10 +22,9 @@
                 <% end %>
                 <%= link_to board_path(@board), id: "button-delete-#{@board.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
                   <i class="bi bi-trash-fill"></i>
-
                 <% end %>
               </div>
-              </div>
+            <% end %>
             </div>
             <p><%= simple_format(@board.body) %></p>
           </div>

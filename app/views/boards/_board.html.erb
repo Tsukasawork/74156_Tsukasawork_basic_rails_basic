@@ -8,16 +8,15 @@
         <%= link_to board.title, board_path(board) %>
           </h4>
           <% if current_user.own?(board) %>
-            <div class='ms-auto'>
-              <%= link_to edit_board_path(board), id: "button-edit-#{board.id}" do %>
-                <i class="bi bi-pencil-fill"></i>
-              <% end %>
-              <%= link_to board_path(board), id: "button-delete-#{board.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
-                <i class="bi bi-trash-fill"></i>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+          <div class='ms-auto'>
+            <%= link_to edit_board_path(board), id: "button-edit-#{board.id}" do %>
+              <i class="bi bi-pencil-fill"></i>
+            <% end %>
+            <%= link_to board_path(board), id: "button-delete-#{board.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
+              <i class="bi bi-trash-fill"></i>
+            <% end %>
+          </div>
+        <% end %>
 
         <ul class="list-inline">
           <li><i class="bi bi-person"></i><%= board.user.decorate.full_name %></li>
