@@ -16,11 +16,11 @@ class User < ApplicationRecord
   def bookmark(board)
     bookmark_boards << board
   end
-  
+
   def unbookmark(board)
     bookmark_boards.destroy(board)
   end
-  
+
   def bookmark?(board)
     bookmark_boards.include?(board)
   end
