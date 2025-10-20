@@ -50,6 +50,8 @@ gem 'turbo-rails', '1.1.1'
 gem 'kaminari', '1.2.2'
 gem 'bootstrap5-kaminari-views'
 gem 'ransack', '3.2.1'
+gem 'carrierwave'
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
