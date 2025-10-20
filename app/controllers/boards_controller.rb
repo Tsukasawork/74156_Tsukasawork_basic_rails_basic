@@ -1,6 +1,7 @@
 class BoardsController < ApplicationController
   def index
-    @boards = Board.includes(:user).page(params[:page])
+    @q = Board.ransack(params[:q])
+    @boards = @q.result(distinct: true).includes(:user).page(params[:page]).order('created_at desc')
   end
 
   def new
