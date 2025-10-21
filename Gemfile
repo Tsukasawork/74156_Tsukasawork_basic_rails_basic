@@ -50,7 +50,7 @@ gem 'turbo-rails', '1.1.1'
 gem 'kaminari', '1.2.2'
 gem 'bootstrap5-kaminari-views'
 gem 'ransack', '3.2.1'
-gem 'config', '4.0.0'
+gem 'config'
 
 
 group :development, :test do
@@ -64,7 +64,7 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter"
   gem "rspec-rails"
   gem "rspec_junit_formatter"
-  gem 'letter_opener_web', '~> 3.0'
+  gem 'letter_opener_web', '~> 2.0'
 end
 
 group :development do
